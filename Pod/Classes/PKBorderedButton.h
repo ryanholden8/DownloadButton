@@ -14,4 +14,6 @@
 
 - (void)cleanDefaultAppearance;
 
+-(void)markHighlighted;
+
 @end
