@@ -46,4 +46,16 @@
     [self setAttributedTitle:nil forState:UIControlStateHighlighted];
 }
 
+
+-(void)markHighlighted {
+    [self setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    
+    UIImage *backImage = [UIImage buttonBackgroundWithColor:self.tintColor];
+    [self setBackgroundImage:[UIImage highlitedButtonBackgroundWithColor:self.tintColor]
+                    forState:UIControlStateNormal];
+    
+    [self setBackgroundImage: [backImage resizableImageWithCapInsets:UIEdgeInsetsMake(15.f, 15.f, 15.f, 15.f)]
+                    forState:UIControlStateHighlighted];
+}
+
 @end
